@@ -22,3 +22,34 @@ function tmobil_frontend_init() {
 
 add_action('plugins_loaded', 'tmobil_frontend_init');
 add_image_size( 'home-thumbnail', 160, 130, true );
+
+add_action( 'widgets_init', 'theme_slug_widgets_init' );
+function theme_slug_widgets_init() {
+    register_sidebar( array(
+		'name'          => __( 'Ads Single top', 'twentyfourteen' ),
+		'id'            => 'sidebar-1',
+		'description'   => __( 'Main sidebar that appears on the left.', 'twentyfourteen' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Ads Single bottom', 'twentyfourteen' ),
+		'id'            => 'sidebar-2',
+		'description'   => __( 'Additional sidebar that appears on the right.', 'twentyfourteen' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Ads home', 'twentyfourteen' ),
+		'id'            => 'sidebar-3',
+		'description'   => __( 'Anuncio para home.', 'twentyfourteen' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
+}
