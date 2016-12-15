@@ -53,3 +53,12 @@ function theme_slug_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 }
+
+if(!function_exists('tmobil_setup')){
+    function tmobil_setup() {
+        // This theme uses wp_nav_menu() in one location.
+        register_nav_menu( 'tmobil_menu', __( 'Menú móvil, para la parte de arriba (menú principal). ', 'tmobil' ) );
+    }
+}
+
+add_action( 'init', 'tmobil_setup' );
