@@ -26,27 +26,36 @@ add_image_size( 'home-thumbnail', 160, 130, true );
 add_action( 'widgets_init', 'theme_slug_widgets_init' );
 function theme_slug_widgets_init() {
     register_sidebar( array(
-		'name'          => __( 'Ads Single top', 'twentyfourteen' ),
+		'name'          => __( 'Publicidad No. 1', 'tmobil' ),
 		'id'            => 'sidebar-1',
-		'description'   => __( 'Main sidebar that appears on the left.', 'twentyfourteen' ),
+		'description'   => __( 'Tag 1.', 'twentyfourteen' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
 	register_sidebar( array(
-		'name'          => __( 'Ads Single bottom', 'twentyfourteen' ),
+		'name'          => __( 'Publicidad No. 2', 'tmobil' ),
 		'id'            => 'sidebar-2',
-		'description'   => __( 'Additional sidebar that appears on the right.', 'twentyfourteen' ),
+		'description'   => __( 'Tag 2.', 'twentyfourteen' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
 	register_sidebar( array(
-		'name'          => __( 'Ads home', 'twentyfourteen' ),
+		'name'          => __( 'Publicidad No. 3', 'twentyfourteen' ),
 		'id'            => 'sidebar-3',
-		'description'   => __( 'Anuncio para home.', 'twentyfourteen' ),
+		'description'   => __( 'Tag 3.', 'tmobil' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
+    register_sidebar( array(
+		'name'          => __( 'Publicidad No. 4', 'twentyfourteen' ),
+		'id'            => 'sidebar-4',
+		'description'   => __( 'Taboola.', 'tmobil' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
