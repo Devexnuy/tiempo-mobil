@@ -116,6 +116,11 @@ if (!class_exists('TMOBIL_Application')) {
             $desktop_mode = false;
             if (!wp_is_mobile()) {
                 $desktop_mode = true;
+                update_option( 'show_on_front', 'page' );
+                update_option( 'page_on_front', 126651);
+            } else {
+                update_option( 'show_on_front', 'posts' );
+                update_option( 'page_on_front', 0 );
             }
             return $desktop_mode;
         }
