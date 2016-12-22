@@ -61,6 +61,15 @@ function theme_slug_widgets_init() {
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
+	register_sidebar( array(
+		'name'          => __( 'Publicidad No. 5', 'twentyfourteen' ),
+		'id'            => 'sidebar-5',
+		'description'   => __( 'Tag 4..', 'tmobil' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
 }
 
 if(!function_exists('tmobil_setup')){
